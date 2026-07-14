@@ -1,0 +1,182 @@
+/* ============================================================
+   Skills CSS — 技能页专属样式
+   ============================================================ */
+
+/* ===== 技能分类卡片 ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+}
+
+.skill-category-card {
+  background: var(--bg-card);
+  border: var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+}
+
+.skill-category-card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.skill-category-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+}
+
+.skill-category-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skill-bar-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.skill-bar-label {
+  width: 80px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.skill-bar-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-bar-fill.level-high {
+  background: linear-gradient(90deg, #00d4ff, #10b981);
+}
+
+.skill-bar-fill.level-mid {
+  background: linear-gradient(90deg, #7c3aed, #00d4ff);
+}
+
+.skill-bar-fill.level-ok {
+  background: linear-gradient(90deg, #f59e0b, #7c3aed);
+}
+
+.skill-bar-value {
+  width: 36px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+/* ===== 技术生态图 ===== */
+.eco-system {
+  margin-bottom: var(--space-3xl);
+}
+
+.eco-system canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* ===== 数据价值链 ===== */
+.value-chain {
+  margin-bottom: var(--space-3xl);
+}
+
+.chain-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.chain-node {
+  background: var(--bg-card);
+  border: var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  min-width: 130px;
+  transition: all var(--transition-base);
+}
+
+.chain-node:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-4px);
+}
+
+.chain-node .icon {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.chain-node .title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.chain-node .tools {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.chain-arrow {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chain-flow {
+    flex-direction: column;
+  }
+
+  .chain-arrow {
+    transform: rotate(90deg);
+  }
+
+  .chain-node {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
