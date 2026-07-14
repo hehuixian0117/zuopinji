@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="联系何慧娴 - 大数据管理与应用专业，求职数据分析/大数据工程/AI算法/数据全栈岗位">
+  <title>联系我 | 何慧娴</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">He Huixian</a>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="projects.html">项目</a>
+        <a href="skills.html">技能</a>
+        <a href="about.html">关于</a>
+        <a href="contact.html" class="active">联系</a>
+      </div>
+      <button class="theme-toggle" title="切换主题">☀️</button>
+      <button class="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html">首页</a>
+    <a href="projects.html">项目</a>
+    <a href="skills.html">技能</a>
+    <a href="about.html">关于</a>
+    <a href="contact.html" class="active">联系</a>
+  </div>
+
+  <div class="page-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>联系我</h2>
+          <p class="subtitle">期待与您的沟通，让我们一起用数据创造价值</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- 左侧：联系信息卡片 -->
+          <div class="contact-info-cards">
+            <div class="contact-card reveal copyable" data-copy="1162811518@qq.com">
+              <div class="contact-card-icon">📧</div>
+              <div class="contact-card-body">
+                <h4>Email</h4>
+                <p>1162811518@qq.com</p>
+                <span class="copy-hint">点击复制</span>
+              </div>
+            </div>
+
+            <div class="contact-card reveal copyable" data-copy="15159050272">
+              <div class="contact-card-icon">📱</div>
+              <div class="contact-card-body">
+                <h4>电话</h4>
+                <p>15159050272</p>
+                <span class="copy-hint">点击复制</span>
+              </div>
+            </div>
+
+            <div class="contact-card reveal">
+              <div class="contact-card-icon">🏫</div>
+              <div class="contact-card-body">
+                <h4>学校</h4>
+                <p>重庆三峡科技大学</p>
+                <p style="font-size:0.82rem;color:var(--text-muted);">大数据管理与应用 · 2027届</p>
+              </div>
+            </div>
+
+            <div class="contact-card reveal">
+              <div class="contact-card-icon">💼</div>
+              <div class="contact-card-body">
+                <h4>求职意向</h4>
+                <div class="job-intent">
+                  <span class="job-tag">数据分析师</span>
+                  <span class="job-tag">大数据工程师</span>
+                  <span class="job-tag">AI/算法工程师</span>
+                  <span class="job-tag">数据全栈</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右侧：联系表单 -->
+          <div class="contact-form reveal" id="contact-form-wrapper">
+            <h3>发送消息</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" placeholder="请输入您的姓名" required>
+              </div>
+              <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="email" id="email" placeholder="请输入您的邮箱" required>
+              </div>
+              <div class="form-group">
+                <label for="message">留言</label>
+                <textarea id="message" placeholder="请输入您想说的话..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                ✉️ 发送消息
+              </button>
+            </form>
+            <div class="form-success" id="form-success">
+              <div class="icon">✅</div>
+              <h3>消息已发送！</h3>
+              <p style="color:var(--text-secondary);">感谢您的留言，我会尽快回复您。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 何慧娴 | 重庆三峡科技大学 | 大数据管理与应用</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>
